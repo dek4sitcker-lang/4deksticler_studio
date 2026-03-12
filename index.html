@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4Deksticker Studio Brand</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!-- Premium Top Bar -->
+
+<nav>
+<div class="logo">4Deksticker</div>
+
+<!-- hamburger -->
+<div class="menu-toggle">
+<i class="fas fa-bars"></i>
+</div>
+
+<ul class="nav-links">
+<li><a href="./">Home</a></li>
+<li><a href="#work">Work</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<a href="#contact" class="nav-btn">Order Now</a>
+</nav>
+<div class="menu-overlay"></div>
+
+<section class="hero">
+
+  <div class="hero-bg"></div>
+  <canvas id="particles"></canvas>
+
+  <div class="hero-content">
+    <h1 class="title">
+  4DEKSTICKER STUDIO
+  <span class="rgb-line"></span>
+  <div class="hero-tag">4DEKSTICKER DESIGN STUDIO</div>
+</h1>
+<div class="hero-right">
+
+  <div class="feature-card">
+    <i class="fas fa-palette"></i>
+    <h4>Creative Design</h4>
+    <p>ออกแบบโดดเด่น แตกต่าง ไม่ซ้ำใคร</p>
+  </div>
+
+  <div class="feature-card">
+    <i class="fas fa-print"></i>
+    <h4>Premium Quality</h4>
+    <p>วัสดุคุณภาพสูง สีสด คมชัดทุกงาน</p>
+  </div>
+
+  <div class="feature-card">
+    <i class="fas fa-bolt"></i>
+    <h4>Fast Production</h4>
+    <p>รวดเร็ว ตรงเวลา มืออาชีพ</p>
+    
+</div>
+
+</div>
+    <p class="subtitle">
+      ไอเดียต้องแรง งานต้องชัด แบรนด์ต้องเด่น
+      เราคือสตูดิโอออกแบบป้ายไวนิลและสติ๊กเกอร์ที่เข้าใจสายครีเอทีฟยุคใหม่ 
+      ผลิตงานคุณภาพสูง สีสดจัดเต็ม พร้อมดันภาพลักษณ์ธุรกิจคุณให้ทะลุทุกสายตา
+    </p>
+
+    
+</section> <!-- ✅ เพิ่มปิด hero ตรงนี้ -->
+<div class="section-divider"></div>
+<section class="work-section">
+
+  <div class="bg-blur"></div>
+
+  <h2 class="work-title">ผลงานการออกแบบของเรา</h2>
+
+  <div class="slider">
+
+    <div class="slide active">
+      <img src="629928039_1595694331479593_8727350105300988096_n.jpg">
+    </div>
+
+    <div class="slide">
+      <img src="ChatGPT Image Mar 4, 2026, 05_08_22 AM.png">
+    </div>
+
+    <div class="slide">
+      <img src="641819095_910729228210219_2337728776626741557_n.jpg">
+    </div>
+
+    <!-- ปุ่ม -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+
+    <!-- dots -->
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="contact">
+
+<h2 class="contact-title">
+  Let's Work Together
+</h2>
+
+<p class="contact-sub">
+ติดต่อเราเพื่อออกแบบ สติ๊กเกอร์ ป้ายไวนิล และงานโฆษณาแบบมืออาชีพ
+</p>
+
+<div class="contact-grid">
+
+<a href="https://lin.ee/BOSnMod" target="_blank" class="contact-card">
+<i class="fab fa-line"></i>
+<h3>Line Official</h3>
+<span>4deksticker Official</span>
+</a>
+
+<a href="https://www.instagram.com/4deksticker" target="_blank" class="contact-card">
+<i class="fab fa-instagram"></i>
+<h3>Instagram</h3>
+<span>@4deksticker</span>
+</a>
+
+<a href="https://www.facebook.com/share/1AbGmBTffj/?mibextid=wwXIfr" target="_blank" class="contact-card">
+<i class="fab fa-facebook-f"></i>
+<h3>Facebook</h3>
+<span>4Deksticker</span>
+</a>
+
+<div class="contact-card">
+<i class="fas fa-envelope"></i>
+<h3>Email</h3>
+<span>4deksticker@gmail.com</span>
+</div>
+
+<div class="contact-card">
+<i class="fas fa-phone"></i>
+<h3>Phone</h3>
+<span>095-648-6561</span><br>
+<span>093-176-7336</span>
+</div>
+
+</div>
+
+<div class="contact-cta">
+<h3>พวกเราพร้อมเริ่มงานแล้ว</h3>
+</div>
+
+</section>
+
+<footer>
+    © 2026 4Deksticker | ขอบคุณที่ใช้บริการ
+</footer>
+
+<script>
+
+/* ================= PARTICLES ================= */
+
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas(){
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+let particles = [];
+
+for(let i=0;i<120;i++){
+  particles.push({
+    x: Math.random()*canvas.width,
+    y: Math.random()*canvas.height,
+    size: Math.random()*1.5 + 0.5,
+    speedX:(Math.random()-0.5)*0.5,
+    speedY:(Math.random()-0.5)*0.5
+  });
+}
+
+function animate(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  particles.forEach(p=>{
+    p.x += p.speedX;
+    p.y += p.speedY;
+
+    if(p.x<0||p.x>canvas.width) p.speedX*=-1;
+    if(p.y<0||p.y>canvas.height) p.speedY*=-1;
+
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+    ctx.fillStyle="rgba(255,255,255,0.8)";
+    ctx.shadowBlur = 15;
+    ctx.shadowColor = "rgba(255,255,255,0.8)";
+    ctx.fill();
+  });
+
+  requestAnimationFrame(animate);
+}
+animate();
+
+
+/* ================= MOBILE MENU ================= */
+
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav-links");
+const overlay = document.querySelector(".menu-overlay");
+
+if(toggle){
+  toggle.addEventListener("click",()=>{
+    nav.classList.toggle("active");
+    overlay.classList.toggle("show");
+  });
+}
+
+if(overlay){
+  overlay.addEventListener("click",()=>{
+    nav.classList.remove("active");
+    overlay.classList.remove("show");
+  });
+}
+
+document.querySelectorAll(".nav-links a").forEach(link=>{
+  link.addEventListener("click",()=>{
+    nav.classList.remove("active");
+    overlay.classList.remove("show");
+  });
+});
+
+
+/* ================= SLIDER ================= */
+
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+const bg = document.querySelector(".bg-blur");
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
+
+let current = 0;
+let autoInterval;
+
+function showSlide(index){
+  slides.forEach(s=>s.classList.remove("active"));
+  dots.forEach(d=>d.classList.remove("active"));
+
+  slides[index].classList.add("active");
+  dots[index].classList.add("active");
+
+  if(bg){
+    bg.style.backgroundImage =
+      `url(${slides[index].querySelector("img").src})`;
+  }
+
+  current = index;
+}
+
+function nextSlide(){
+  showSlide((current+1)%slides.length);
+}
+
+function prevSlide(){
+  showSlide((current-1+slides.length)%slides.length);
+}
+
+if(nextBtn) nextBtn.addEventListener("click", nextSlide);
+if(prevBtn) prevBtn.addEventListener("click", prevSlide);
+
+dots.forEach((dot,i)=>{
+  dot.addEventListener("click",()=> showSlide(i));
+});
+
+function startAuto(){
+  autoInterval = setInterval(nextSlide, 5000);
+}
+
+function stopAuto(){
+  clearInterval(autoInterval);
+}
+
+const slider = document.querySelector(".slider");
+
+if(slider){
+  slider.addEventListener("mouseenter", stopAuto);
+  slider.addEventListener("mouseleave", startAuto);
+}
+
+if(slides.length > 0){
+  showSlide(0);
+  startAuto();
+}
+
+</script>
+</body>
+</html>
