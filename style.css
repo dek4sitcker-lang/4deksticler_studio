@@ -654,15 +654,16 @@ scroll-margin-top:100px;
   text-transform:uppercase;
 }
    .title{
-  background:linear-gradient(
-    90deg,
-    #ffffff,
-    #bbbbbb,
-    #ffffff
-  );
-  background-clip:text;
-  -webkit-background-clip:text;
-  color:transparent;
+font-family:'Teko', sans-serif;
+font-size:64px;
+letter-spacing:2px;
+text-transform:uppercase;
+line-height:1.1;
+
+background:linear-gradient(90deg,#ffffff,#dcdcdc);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
 }
 .logo{
   font-weight:600;
@@ -1566,4 +1567,57 @@ body::before{
     rgba(255,255,255,0.05),
     transparent 60%);
   pointer-events:none;
+}
+/* ===== FIX MOBILE OVERFLOW ===== */
+
+html, body{
+width:100%;
+overflow-x:hidden;
+}
+
+/* hero layout มือถือ */
+@media(max-width:768px){
+
+.hero{
+flex-direction:column;
+gap:30px;
+padding:120px 20px 80px;
+text-align:center;
+align-items:center;
+}
+
+/* title ไม่ให้ดันจอ */
+.title{
+font-size:34px !important;
+line-height:1.2;
+word-break:break-word;
+}
+
+/* subtitle */
+.subtitle{
+font-size:15px;
+line-height:1.6;
+}
+
+/* feature card */
+.hero-right{
+width:100%;
+max-width:100%;
+}
+
+/* nav padding */
+nav{
+padding:16px 20px;
+}
+
+/* ป้องกัน element ดันจอ */
+.hero-content{
+padding:30px 20px;
+}
+
+}
+img,video,canvas{
+max-width:100%;
+height:auto;
+display:block;
 }
